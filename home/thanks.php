@@ -45,7 +45,7 @@ require('header.php');
                         <input type="checkbox" name="Honey" value="cb Honey"/> Honey<br/>
                         <input type="checkbox" name="Wax" value="cb Wax"/> Wax<br/>
                         <input type="checkbox" name="Fruit" value="cb Fruit"/> Fruit<br/>
-                        <input type="checkbox" name="Herb" value="cb Herb"/> Herbs<br/>
+                        <input type="checkbox" name="Herbs" value="cb Herbs"/> Herbs<br/>
                         <input type="checkbox" name="Spice" value="cb Spice"/> Spice<br/>
                         <input type="checkbox" name="Cheese" value="cb Cheese"/> Cheese<br/>
                         <input type="checkbox" name="Canned Goods" value="cb Canned Goods"/> Canned Goods<br/>
