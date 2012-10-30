@@ -32,15 +32,20 @@ $api = new MCAPI(MC_APIKEY);
 
 $listId = "a9a7385395";
 $merge_vars = array('GROUPINGS'=>array(array('name'=>'Neighborhoods','groups'=>$address)));
-
-$retval = $api->listSubscribe($listId,$email,$merge_vars,'html',false,false,false,false);
-if($api->errorCode){
-   $eString = "Unable to load listSubscribe()!  ErrorCode is ".$api->errorCode." errorMsg is ".$api->errorMessage;
+$results = mysql_query("SELECT id FROM petitions WHERE email='$email'");
+$num = mysql_num_rows($results);
+if ($num >= 1){
+    $u = mysql_fetch_array($results);
+    $uid = $u['id'];
+    $retval = $api->listUpdateMember($listId,$email,$merge_vars,'html',false);
 } else {
-   $eString = "Subbed!";
+    $retval = $api->listSubscribe($listId,$email,$merge_vars,'html',false,false,false,false);
 }
-//end experimental field
-
+if ($api->errorCode){
+    $eString = "Unable to load listSubscribe()!  ErrorCode is ".$api->errorCode." errorMsg is ".$api->errorMessage;
+} else {
+    $eString = "Subbed!";
+}
 //Insert entry
 mysql_query("INSERT INTO petitions (search_address, email, lat, lng, neighborhood) VALUES ('$address','$email','$lat','$lng','$nid')");
 $row = mysql_fetch_array(mysql_query("SELECT id FROM petitions ORDER BY id DESC"));

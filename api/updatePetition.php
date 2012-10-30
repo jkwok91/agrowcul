@@ -40,10 +40,7 @@
 	echo "Unable to load listUpdateMember()!\n";
 	echo "\tCode=".$api->errorCode."\n";
 	echo "\tMsg=".$api->errorMessage."\n";
-    } else {
-        echo "FIXED\n";
     }
-
     echo ("success");
 
 ?>
