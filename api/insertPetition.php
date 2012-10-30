@@ -1,6 +1,7 @@
 <?php
 include('config.php');
 require_once('MCAPI.class.php');
+session_start();
 $connection = mysql_connect(HOST, USER, PW);
 mysql_select_db(DB, $connection);
 
@@ -9,6 +10,8 @@ $email = mysql_real_escape_string(stripcslashes($_GET["email"]));
 $lat = $_GET["lat"];
 $lng = $_GET["lng"];
 $nbhd = mysql_real_escape_string(stripcslashes($_GET["neighborhood"]));
+
+$_SESSION['email'] = $_GET['email'];
 
 $results = mysql_query("SELECT id FROM neighborhoods WHERE name='$nbhd'");
 $num = mysql_num_rows($results);
