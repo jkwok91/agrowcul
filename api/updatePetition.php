@@ -5,10 +5,11 @@
     mysql_select_db(DB, $connection);
     
     $custType = $_GET['custType'];
+    $cType = $custType;
     $name = mysql_real_escape_string(stripcslashes($_GET['name']));
     $id = $_GET['id'];
     $email = $_GET['email'];
-    if ($custType=="others") $custType = $_GET['custType-others'];
+    if ($custType=="Others") $custType = $_GET['custType-others'];
    
     $api = new MCAPI(MC_APIKEY);
     //Farm Request ListId
@@ -33,7 +34,7 @@
     endforeach;
 
     //gather information other than email-- i.e. neighborhood
-    $merge_vars = array("FNAME"=>$name,"GROUPINGS"=>array(array('name'=>'Food Interests','groups'=>$foodList)));
+    $merge_vars = array("FNAME"=>$name,"CTYPE"=>$cType,"GROUPINGS"=>array(array('name'=>'Food Interests','groups'=>$foodList)));
     $retval = $api->listUpdateMember($listId,$email,$merge_vars,'html',false);
  
     if ($api->errorCode){

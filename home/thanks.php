@@ -30,10 +30,10 @@ require('header.php');
                     <p>
                         <span class="label">What kind of customer are you?</span>
                         <select id="custType" name="custType">
-                            <option value="individual">Individual</option>
-                            <option value="restaurant">Restaurant</option>
-                            <option value="school">School</option>
-                            <option value="others">Community Center</option>
+                            <option value="Individual">Individual</option>
+                            <option value="Restaurant">Restaurant</option>
+                            <option value="School">School</option>
+                            <option value="Others">Community Center</option>
                         </select>
                         <br/>
                         <span id="custType-others" type="text" style="display:none;">Please specify: <input name="custType-others"/></span>
@@ -89,7 +89,7 @@ require('header.php');
 </div><!--/.content-->
 <script>
     $('#custType').change(function(){
-        if (this.value == 'others') {
+        if (this.value == 'Others') {
             $('#custType-others').show();
         } else {
             $('#custType-others').hide();
