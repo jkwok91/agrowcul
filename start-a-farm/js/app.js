@@ -164,14 +164,10 @@ function showTypes(petitions) {
     ind = 0,
     re = 0,
     sc = 0,
-    ot = 0,
-    na = 0;
+    ot = 0;
     for (var i=0; i<total; i++) {
         var p = petitions[i];
         switch (p.type) {
-            case "":
-                na++;
-                break;
             case "individual":
                 ind++;
                 break;
@@ -190,12 +186,11 @@ function showTypes(petitions) {
     if (re > max) max = re;
     if (sc > max) max = sc;
     if (ot > max) max = ot;
-    if (na > max) max = na;
+    //if (na > max) max = na;
     $('#bar-individual').width(getWidth(ind)).find('.vis-percent').html(ind).css('color', ind==0 ? '#8e8473':'#fff');
     $('#bar-restaurant').width(getWidth(re)).find('.vis-percent').html(re).css('color', re==0 ? '#8e8473':'#fff');;
     $('#bar-schools').width(getWidth(sc)).find('.vis-percent').html(sc).css('color', sc==0 ? '#8e8473':'#fff');;
     $('#bar-others').width(getWidth(ot)).find('.vis-percent').html(ot).css('color', ot==0 ? '#8e8473':'#fff');;
-    $('#bar-unspecified').width(getWidth(na)).find('.vis-percent').html(na).css('color', na==0 ? '#8e8473':'#fff');;
     
     function getWidth(n) {
         return n/max*168;

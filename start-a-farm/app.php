@@ -28,7 +28,6 @@
                             <p>Restaurants</p>
                             <p>Schools</p>
                             <p>Others</p>
-                            <p>Unspecified</p>
                         </div>
                         <div id="vis-petitions-bars">
                             <div class="vis-bar" id="bar-individual">
@@ -41,9 +40,6 @@
                                 <span class="vis-percent">0</span>
                             </div>
                             <div class="vis-bar" id="bar-others">
-                                <span class="vis-percent">0</span>
-                            </div>
-                            <div class="vis-bar" id="bar-unspecified">
                                 <span class="vis-percent">0</span>
                             </div>
                         </div>
