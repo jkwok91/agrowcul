@@ -1,0 +1,547 @@
+html, body {
+    height: 100%;
+    font-family:FranklinGothicURW-Boo,'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif;
+}
+
+h1,h4{font-family:FranklinGothicURW-Dem,'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif;}
+
+#container {
+    width:100%;
+    min-height: 100%;
+    position:relative;
+    background:url(../../images/linen.jpg) repeat white;
+}
+
+#header	{
+    width:885px;
+    margin:0 auto;
+    z-index:1000;
+    position:relative;
+    padding-top: 15px;
+}
+
+
+#logo {
+    margin:2px 0 20px 103px;
+    position:relative;
+    float:left;
+    height:50px;
+    width:215px;
+    text-indent:-9999px;
+    background:url(../../images/nav-sprite.png) no-repeat -88px top;
+    cursor:pointer;
+}
+
+.location {
+    width:138px;
+    height:138px;
+    background:url(../../images/stamp-nyc.png) center center no-repeat;
+    display:block;
+    text-indent:-9999px;
+    position:absolute;
+    right:10px;
+    top:-18px;
+}
+
+
+#nav {
+    top:15px;
+    z-index:100;
+}
+
+#home_link {
+    display:block;
+    text-indent:-9999px;
+    background:url(../../images/nav-sprite.png) no-repeat;
+    background-position:left top;
+    width:88px;
+    height:55px;
+    cursor: pointer;
+}
+
+/* General */
+.block {
+    border: 5px solid #fff;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+    -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.2);
+    background: url(../../images/texture.png) #F5F1E8;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* APP */
+#title h1 {
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: -1px;
+    color: #6b5836;
+    font-weight: bold;
+    margin: 40px 0;
+    text-shadow: 0px 1px 1px #fff;
+}
+
+#app-wrapper {
+    margin-top: 30px;
+    padding-bottom: 100px;
+}
+
+#content {
+    width: 960px;
+    margin: 0px auto 50px;
+    position: relative;
+}
+#content:after {
+						content:' ';
+						width:100%;
+						position:absolute;
+						height:20px;
+						bottom:-23px;
+						background:url(../../images/splash/wide-shadow.png) no-repeat;
+						left:0;
+						-webkit-background-size: 100% 100%!important; 
+          				background-size: 100% 100%!important; 
+						opacity:.4;
+						}
+#map-wrapper {
+    height: 450px;
+    overflow: hidden;
+    border-bottom: 3px solid #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#map {
+    height: 480px;
+}
+
+#info {
+    padding: 25px 30px;
+    color: #8E8473;
+    font-size: .9em;
+    line-height: 1.4em;
+    text-shadow: 0px 1px 1px #fff;
+}
+
+#info a {
+    color: #8E8473;
+    text-shadow: 0px 1px 1px #fff;
+    text-decoration: none;
+}
+
+.infobox {
+    width: 93px;
+    height: 83px;
+    background: url(../images/box.png) 0 0 no-repeat;
+    padding:14px 25px 14px 25px;
+    font-size:12px;
+    line-height:14px;
+    color:#6b5836;
+}
+
+.infobox ul {
+    line-height: 16px;
+    margin-top: 6px;
+}
+
+.info-num {
+    float: right;
+    color: #f8714f;
+}
+
+.infobox h4 {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+#zoom {
+    width: 97px;
+    height: 46px;
+    background: url(../images/ribbon.png) 0 0 no-repeat;
+    position: absolute;
+    top: 15px;
+    right: -16px;
+    z-index: 2;
+    color: #fff;
+    font-size: 22px;
+    line-height: 36px;
+    font-weight: bold;
+}
+
+#zoom-minus {
+    margin-left: 28px;
+    cursor: pointer;
+}
+
+#zoom-plus {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#info h3 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #685836;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dbd8d2;
+}
+
+#info h4 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.vis-subheader {
+    line-height: 40px;
+    font-weight: bold;
+    color: #685836;
+}
+
+.vis-column {
+    float: left;
+}
+
+#vis-petitions {
+    width: 280px;
+    padding-right: 20px;
+    background: url(../images/stitch.png) 280px 0 no-repeat;
+}
+
+#vis-farms {
+    width: 280px;
+    padding: 0 15px;
+    background: url(../images/stitch.png) 295px 0 no-repeat;
+}
+
+#vis-projects {
+    width: 270px;
+    padding-left: 20px;
+    border-right: none;
+}
+
+.vis-count {
+    float: right;
+    text-shadow: none;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    padding: 1px 8px;
+}
+
+/* Petitions */
+
+#vis-petitions-labels {
+    float: left;
+    width: 35%;
+}
+
+#vis-petitions-labels p {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#vis-petitions-bars {
+    float: left;
+    width: 60%;
+}
+
+.vis-bar {
+    background-color: rgba(54,197,187, 0.6);
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.vis-percent {
+    line-height: 18px;
+    color: #fff;
+    text-shadow: none;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 5px;
+    display: block;
+}
+
+.vis-content {
+    width: 95%;
+}
+
+.vis-no-content {
+    font-size: 13px;
+    margin-top: 15px;
+    line-height: 16px;
+    width: 95%;
+}
+
+#info .vis-no-content a {
+    font-weight: bold;
+    color: #2ba196;
+}
+
+#vis-petitions-types, #vis-products {
+    margin-top: 10px;
+}
+
+.vis-product {
+    display: block;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 4px 8px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    color: #fff;
+    text-shadow: none;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.vis-farm {
+    margin: 20px 0;
+}
+
+.vis-farm-icon {
+    width:60px;
+    height:60px;
+    float: left;
+}
+
+.vis-farm-icon img {
+    width: 60px;
+    height: 60px;
+}
+
+.vis-farm-info {
+    width:180px;
+    margin-left:20px;
+    float: left;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.vis-farm-name {
+    font-weight: bold;
+    font-size: 14px;
+    color: #685836;
+}
+
+.vis-farm-link {
+    font-weight: bold;
+    color: #eb7c5e !important;
+}
+
+#intro {
+    padding: 20px;
+    text-align: center;
+    color: #8E8473;
+    font-weight: bold;
+    text-shadow: 0px 1px 1px #fff;
+    font-size: 14px;
+}
+
+#action {
+    position: relative;
+    height: 100px;
+    background: url(../../images/texture.png) #cec4aa;
+    font-size: 15px;
+    font-weight: bold;
+    color: #8E8473;
+    text-shadow: 0px 1px 1px #fff;
+}
+
+#or {
+   	height: 100px;
+	position: absolute;
+	left: 50%;
+	width: 44px;
+	margin-left: -15px;
+	top: 0;
+	display: block;
+	text-indent: -9999px;
+	background:url(../../images/map-or.png);
+}
+
+#sell-text {
+    position: absolute;
+    left: 230px;
+    top: 45px;
+}
+
+#start-text {
+    position: absolute;
+    right: 260px;
+    top: 45px;
+}
+
+#start-button {
+    position: absolute;
+    bottom: 20px;
+    right: -15px;
+    height: 46px;
+    width: 215px;
+    background: url(../images/start.png) 0 0 no-repeat;
+}
+
+#sell-button {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: -14px;
+    height: 46px;
+    width: 215px;
+    background: url(../images/sell.png) 0 0 no-repeat;
+}
+
+#sell-button:hover {
+    cursor: pointer;
+    background-position: 0 -46px;
+}
+
+#soon {
+    position: absolute;
+    right: -38px;
+    bottom: -35px;
+}
+
+.clear {
+    clear: both;
+}
+
+.vis-open-petition {
+    padding: 5px 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+    background-color: #15bcb0;
+    text-shadow: 0px 1px 1px #0d9288 !important;
+    color: #fff !important;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Social Elements */
+
+#social {
+    width: 190px;
+    margin: 0px auto 20px;
+    height: 24px;
+    line-height: 24px;
+    position: relative;
+    left: 12px;
+}
+
+#social li {
+    float: left;
+}
+
+/* petition popup */
+/* OVERLAYS */
+.black-container	{position:fixed;top:0;left:0;right:0;bottom:0; z-index:9999;background:rgba(255,255,255,.8);}
+
+
+/* MAIL */
+.envelop	{position:absolute;left:50%;margin-left:-268px;top:1000px;height:430px;width:450px; display: none;}
+.envelop-bg	{ background:url(../../images/envelop-back.png) no-repeat bottom left;display:block;content:' ';width:499px; height:359px;position:absolute;bottom:41px; left:-32px;z-index:1;}
+
+.envelop-top	{ background:url(../../images/envelop-top.png) no-repeat bottom left;display:block;content:' ';width:562px; height:489px;position:absolute;bottom:-180px; left:-140px;z-index:2;}
+
+.form-card	{-webkit-box-shadow:0px 3px 8px rgba(0,0,0,.4);-moz-box-shadow:0px 3px 5px rgba(0,0,0,.4);box-shadow:0px 3px 5px rgba(0,0,0,.4);width:410px;height:260px;background:white url(../../images/texture.png);z-index:3;position:relative;padding:20px;margin-left:30px;}
+
+.form-inset	{-webkit-box-shadow:0px 0px 5px #ddd inset;-moz-box-shadow:0px 0px 5px #ddd inset;box-shadow:0px 0px 5px #ddd inset;height:225px;width:375px;padding:15px;}
+
+i.request-stamp	{display:block;width:97px;height:78px;background:url(../../images/request-top.gif) top right;position:absolute;top:10px;right:10px;text-indent:-9999px;}
+
+.form-card h2	{background:url(../../images/request-top.gif) bottom left;text-indent:-9999px;width:172px;height:55px;display:block;}
+.form-card h3	{text-indent:-9999px;height:15px;}
+
+.pledge img	{float:left;}
+.pledge	input	{float:left;margin-top:-7px;font-size:14px!important;padding:1px 5px 1px 5px!important;}
+.pledge	input[type=email],
+.pledge	input[type=text]	{border-style:solid;border-size:1px; border-color:transparent transparent black;width:165px;}
+
+.pledge .input label	{margin-left:10px; font-size:14px!important;font-style:italic;}
+.pledge input.non-empty		{background-color:#f0ec73!important;color:#666;}
+
+
+.pledge input[type=submit] {margin-top:20px;background-image:url(../../images/pledge-support.png);background-color:transparent!important; text-indent:-9999px; width:212px;height:46px; display:block;float:right;position:relative;right:-49px;line-height:30px;background-position:left top;}
+
+
+.pledge input[type=submit]:hover			{background-position:0px -46px!important;}
+
+.pledge .linebreak	{margin-bottom:20px;}
+
+#close-petition	{position:absolute;right:-15px;top:-15px;border-radius:20px;-webkit-border-radius:20px;-moz-border-radius:20px;width:20px;height:20px;color:#fff;background:#8ba3c0;border:2px solid white;text-align:center;font-size:13px;line-height:20px;box-shadow:0px 1px 3px rgba(0,0,0,.2);-webkit-box-shadow:0px 1px 3px rgba(0,0,0,.2);-moz-box-shadow:0px 1px 3px rgba(0,0,0,.2);cursor:pointer;}
+#close-petition:hover	{background-color:#a0b9cf;}
+#close-petition:active,
+#close-petition:focus	{top:-14px;}
+#petition-submit {cursor:pointer;}
+
+label, input						{font-family:'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif;letter-spacing:1px;}
+
+
+input[type=text],
+input[type=password],
+input[type=email]			{background:white;border:1px solid rgba(0,0,0,.2); padding:4px;font-size:16px;color:#999; }
+input[type=text]:focus,
+input[type=text]:active		{background:#fffff4; -webkit-box-shadow:0px 0px 4px #ff0;}
+
+input[type=submit]			{border:none;font-family:'Helvetica Neue',Helvetica,Arial,Verdana,sans-serif;}
+
+.input 						{position:relative;}
+.input label				{position:absolute;left:0;top:50%;margin-top:-.7em;z-index:1;color:#999;}
+.input input				{background-color:transparent;position:relative;z-index:2;}
+input.non-empty		{background-color:white!important;}
+input.non-empty:hover,
+input.non-empty:active		{background-color:#fffff4;}
+
+
+
+/* Dropdown */
+
+#dropdown {
+    display: none;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left:20px;
+    width: 160px;
+    height: 116px;
+    padding: 12px 30px;
+    background: url(../../images/dropdown.png) 0 0 no-repeat;
+    font-size: 13px;
+    line-height: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0px 1px 1px #0d9288;
+}
+
+#dropdown-yes {
+    font-size: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+#dropdown-yes:hover {
+    top: -1px;
+}
+
+#dropdown-no {
+    margin-left: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+#dropdown-no:hover {
+    top: -1px;
+}
