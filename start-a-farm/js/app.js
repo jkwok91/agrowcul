@@ -450,6 +450,7 @@ $(function(){
                 top: t < 80 ? 80 : t
             }, 300 );
         });
+	 $("#petition-address").val(currentMarker.data.name);
     });
 
     $("#close-petition").click(function (e) {
@@ -484,10 +485,11 @@ function insertPetition(lat, lng) {
         url: '../api/getNeighborhoodByLatLng.php?lat='+lat+'&lng='+lng,
         success: function(nbhd) {
             var petitionData = $('#petition-form').serialize();
+	     //alert(petitionData);
             $.ajax({
                 url:'../api/insertPetition.php?'+petitionData+'&neighborhood='+nbhd,
                 success: function(data) {
-                    console.log(data);
+		      //console.log(data);
                     $('#thanks-address').val(data.address);
                     $('#thanks-id').val(data.id);
                     $('#thanks-form').submit();
