@@ -41,7 +41,7 @@
             })();
         </script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-
+        <script type="text/javascript" src="../js/jquery.inlineComplete-master/jquery.inlinecomplete.js"></script>
 
 </head>
 
@@ -95,7 +95,7 @@
                                
                                 
                                    <div class="input left address-input">
-                                   <label for="address1">Neighborhood</label><input id="address1" type="text" class="pledge-text petition-address" name="address" value=""/>
+                                   <label for="address1">Neighborhood</label><input id="address1" type="text" class="pledge-text petition-address" name="address" autocomplete="off" value=""/>
                                    </div><h5>, New York City.</h5>
             						
                                     <div class="input left email-input">
@@ -366,7 +366,10 @@
 	            });
 	        });
     
-          
+            
+	    $('#address1').inlineComplete({
+		terms: "nbhds.json"
+	    });
             $('.petition-submit').click(function(e){
                 e.preventDefault();
                 if (validateForm()) {
