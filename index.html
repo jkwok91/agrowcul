@@ -466,6 +466,7 @@
             }, function(result, status){
                 if (status == google.maps.GeocoderStatus.OK) {
                     var p = result[0].geometry.location;
+		    alert(p);
                     $('.petition-lat').val(p.lat());
                     $('.petition-lng').val(p.lng());
                     submit(p.lat(), p.lng());

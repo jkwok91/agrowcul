@@ -13,7 +13,7 @@ $nbhd = mysql_real_escape_string(stripcslashes($_GET["neighborhood"]));
 
 $_SESSION['email'] = $_GET['email'];
 
-$results = mysql_query("SELECT id FROM neighborhoods WHERE name='$nbhd'");
+$results = mysql_query("SELECT id FROM nbhdz WHERE name='$nbhd'");
 $num = mysql_num_rows($results);
 $nid;
 if ($num >= 1) {
@@ -31,6 +31,19 @@ if ($num >= 1) {
 $api = new MCAPI(MC_APIKEY);
 
 $listId = "a9a7385395";
+$n_already_exists = false;
+$groupings = $api->listInterestGroupings($listId);
+$grouping_id = $groupings[0]["id"];
+$n_groups = $groupings[0]["groups"];
+foreach ($group as $n_groups){
+    if ($address == $group["name"]){
+        $n_already_exists = true;
+    }
+}
+if (!$n_already_exists){
+    $new_n = $api->listInterestGroupAdd($listId,$address,$grouping_id);
+}
+
 $merge_vars = array('GROUPINGS'=>array(array('name'=>'Neighborhoods','groups'=>$address)));
 $results = mysql_query("SELECT id FROM petitions WHERE email='$email'");
 $num = mysql_num_rows($results);
@@ -57,5 +70,4 @@ header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
 echo json_encode($res);
-
 ?>
