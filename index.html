@@ -418,20 +418,17 @@
         });
 
         function insertPetition(lat, lng) {
-            $.ajax({
-                url: './api/getNeighborhoodByLatLng.php?lat='+lat+'&lng='+lng,
-                success: function(nbhd) {
-                    console.log(nbhd);
-		    var petitionData = $('.petition-form').serialize();
-                    $.ajax({
-                        url:'./api/insertPetition.php?'+petitionData+'&neighborhood='+nbhd,
-                        success: function(data) {
-			    console.log(data);
-                            $('.thanks-address').val(data.address);
-                            $('.thanks-id').val(data.id);
-                            $('.thanks-form').submit();
-                        }
-                    });
+	    $('.petition-lat').val(lat);
+	    $('.petition-lng').val(lng);
+	    alert($('.petition-lat').val());
+	    var petitionData = $('.petition-form').serialize();
+	    $.ajax({
+                url: './api/insertPetition.php?'+petitionData,
+                success: function(data) {
+		    console.log(data);
+                    $('.thanks-address').val(data.address);
+                    $('.thanks-id').val(data.id);
+                    $('.thanks-form').submit();
                 }
             });
         }
@@ -455,24 +452,15 @@
             return email.match(re) 
         }
 
-        function setPetitionCoords(submit) {
-            var gc = new google.maps.Geocoder(),
-            sw = new google.maps.LatLng(40.66188943992168, -74.11737442016602),
-            ne = new google.maps.LatLng(40.86186213158185, -73.72615814208984),
-            bounds = new google.maps.LatLngBounds(sw, ne);
-            gc.geocode({
-                address: $('.petition-address').val(),
-                bounds: bounds
-            }, function(result, status){
-                if (status == google.maps.GeocoderStatus.OK) {
-                    var p = result[0].geometry.location;
-		    alert(p);
-                    $('.petition-lat').val(p.lat());
-                    $('.petition-lng').val(p.lng());
-                    submit(p.lat(), p.lng());
-                } else {
-                    alert('Uh-oh.. we cannot locate the neighborhood.')
-                }
+        function setPetitionCoords(submit){
+	    var nbhd = $('.petition-address').val();
+	    $.ajax({
+		url: './api/getNeighborhoodLatLng.php?neighborhood='+nbhd,
+		success: function(data){
+		    console.log(data);
+		    submit(data.lat,data.lng);
+		},
+		error: function(){alert(coors,'Nooo!');}
             });
         }
 
