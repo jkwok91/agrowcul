@@ -38,6 +38,7 @@
         <!-- Google Analytics Code End -->
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.inlineComplete-master/jquery.inlinecomplete.js"></script>
     </head>
     <body>
         <div id="container">
@@ -77,7 +78,7 @@
                         <i class="request-stamp">Local Farm Request</i>
 
                         <form id="petition-form" class="pledge">
-                            <img src="../images/request-text1.gif" alt="I request that" width="97" height="18" /><div class="input left"><label for="address">i.e. Brooklyn Heights</label><input type="text" class="pledge-text" id="petition-address" name="address" value=""/></div><img src="../images/request-text2.gif" width="75" height="18" alt=", New York" /><img src="../images/request-text3.gif" width="345" height="36" alt="become a part of a grow culture, and hereby pledge my support for an urban farm." class="linebreak" />
+                            <img src="../images/request-text1.gif" alt="I request that" width="97" height="18" /><div class="input left"><input type="text" class="pledge-text" id="petition-address" name="address" autocomplete="off" value=""/></div><img src="../images/request-text2.gif" width="75" height="18" alt=", New York" /><img src="../images/request-text3.gif" width="345" height="36" alt="become a part of a grow culture, and hereby pledge my support for an urban farm." class="linebreak" />
 
                             <img src="../images/request-text4.gif" width="185" height="18" alt="Please keep me updated at" />  <div class="input left"><label for="email">i.e. john@example.com</label><input type="text" class="pledge-text" id="email" name="email" value=""/></div> <img src="../images/request-text5.gif" width="9" height="18" alt="." />
                             <input id="petition-lat" name="lat" type="hidden" value=""/>

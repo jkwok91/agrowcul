@@ -35,6 +35,7 @@ if ($title) {
             .ui-autocomplete li { font-size:10pt; }
         </style>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/jquery.inlineComplete-master/jquery.inlinecomplete.js"></script>
 
         <!-- Google Analytics Code Start -->
         <script type="text/javascript">
@@ -86,9 +87,6 @@ if ($title) {
                     <?php if ($id == 'home'): ?>
                     <a id="menu_handle">+</a>
                     <ul id="menu_drop">
-                        <li>
-                            <a href="#box1" id="link1" class="nav_link" >Home</a>
-                        </li>
                         <li>
                             <a href="#box2" id="link2" class="nav_link">Grow <span class="menu-rollover">Your Food </span></a>
                         </li>

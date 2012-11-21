@@ -451,6 +451,9 @@ $(function(){
             }, 300 );
         });
 	 $("#petition-address").val(currentMarker.data.name);
+	 $("#petition-address").inlineComplete({
+	    terms: "../../nbhds.json"
+   	 });
     });
 
     $("#close-petition").click(function (e) {

@@ -19,7 +19,6 @@ function initMap(address) {
     ib = new InfoBox(iboptions),
     currentMarker;
     
-    
     if (hash) {
         $.ajax({
             url: '../api/getFarmById.php?id='+hash,
@@ -47,7 +46,6 @@ function initMap(address) {
             buildMap();
             findFarms(p);
         });
-    
     }
     
     function buildMap() {
@@ -477,7 +475,9 @@ function buildPaypalButton() {
 //User Interactions Handling ------------------------------------------------------
 
 $(function(){
-    
+    $("#address-search").inlineComplete({
+	    terms: "../../nbhds.json"
+    }); 
     $(".open-petition").click(function (e) {
         e.preventDefault();
         $(".black-container").fadeIn(300, function () {
@@ -486,6 +486,10 @@ $(function(){
                 top: t < 80 ? 80 : t
             }, 300 );
         });
+	 //$("#petition-address").val(hood);
+	 $("#petition-address").inlineComplete({
+		terms: "../../nbhds.json"
+	 });
     });
 
     $("#close-petition").click(function (e) {

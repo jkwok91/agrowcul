@@ -77,7 +77,7 @@ require('header.php');
             <img src="../images/what.png" width="366" height="329" id="what-diagram" align="right" />
             <h4>Spend more time growing and less time selling.</h4>
 
-            <p>We provide a<strong>convenient payment system</strong> that allows new customers to purchase food and share their new purchases with friends.</p>      
+            <p>We provide a <strong>convenient payment system</strong> that allows new customers to purchase food and share their new purchases with friends.</p>      
           	<p class="philosphy">Learn more by reading <a href="../philosophy">our philosophy</a>.</p>
         </div><!--/.block-->
         <a href="#box3" class="nav_link pull-tab" id="pull3">Read on &darr;</a>
