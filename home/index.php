@@ -14,6 +14,10 @@ require('header.php');
 
 <div class="content">
 
+    <div id="back-to-top">
+        <img src="../images/back-to-top.png"/>
+    </div>
+
     <div class="block-cont first">
         <h1 class="heading">Hyper-local, healthy produce at your doorstep</h1>
         <div class="steps" id="first">
@@ -200,6 +204,28 @@ require('header.php');
             inputs.blur(setLabelStyle);
             inputs.each(setLabelStyle);
         }());
+        var topshown = false;
+        $(function(){
+            var $w = $(window);
+            $w.scroll(function(){
+                if ($w.scrollTop()>=585) {
+                    if (!topshown) {
+                        $('#back-to-top').stop().fadeIn();
+                        topshown = true;
+                    }
+                } else {
+                    if (topshown) {
+                       $('#back-to-top').stop().fadeOut();
+                       topshown = false;
+                    }
+                }
+            });
+            $('#back-to-top').click(function(){
+                $(window.opera?'html':'html, body').animate({
+                    scrollTop: 0
+                }, 500, function(){});
+            });
+        });
     </script>
 
 
