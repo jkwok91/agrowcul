@@ -420,7 +420,6 @@
         function insertPetition(lat, lng) {
 	    $('.petition-lat').val(lat);
 	    $('.petition-lng').val(lng);
-	    alert($('.petition-lat').val());
 	    var petitionData = $('.petition-form').serialize();
 	    $.ajax({
                 url: './api/insertPetition.php?'+petitionData,
