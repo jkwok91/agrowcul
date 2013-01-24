@@ -40,22 +40,7 @@ require('header.php');
 
 
             <div class="get-started clearfix">
-
-                <div class="address-cont">
-
-                    <span class="go-local">
-                        Go local
-                    </span>
-                    <form action="findfarms.php" method="post" class="clearfix">
-
-                        <label for="addressbar">Enter your neighborhood</label>
-                        <input type="text" name="addressbar" class="addressbar autocomplete_location left" />
-
-                        <input type="submit" value="Locate" />
-
-                    </form>
-                </div>
-                <span class="or serif">or</span>
+		<a href="/start-a-farm" class="mappp"><img src="../images/locate2.png" width=150/>See a map of demand</a>
                 <a href="#box2" id="goto2" class="nav_link learn-more">Learn More</a>
             </div><!--/.get-started-->
         </div><!--/.steps-->
@@ -78,12 +63,20 @@ require('header.php');
             <div class="block-title-cont">
                 <h2 class="block-title">Sell Better</h2>
             </div><!--/.block-title-cont-->
-            <img src="../images/what.png" width="366" height="329" id="what-diagram" align="right" />
             <h4>Spend more time growing and less time selling.</h4>
-
-            <p>We provide a <strong>convenient payment system</strong> that allows new customers to purchase food and share their new purchases with friends.</p>      
-          	<p class="philosphy">Learn more by reading <a href="../philosophy">our philosophy</a>.</p>
-        </div><!--/.block-->
+	    <img src="../images/Newsletters-Icon.png" />
+            <div id="newsL">
+		<h6>Newsletters</h6>
+		<p>Find out what other farms in your neighborhood are growing and what food your community wants.</p>
+	    </div>
+            <img src="../images/Pitch-Fork-Icon.png" id="fork"/>
+	    <div id="oStore">
+		<h6>Online Store</h6>
+          	<p>Get the tech and tools you need to grow in your windowsills, balconies, and rooftops.</p>
+	    </div>
+		<img id="soon" src="../images/stamp-coming-soon.png">
+	<div style="clear:both;"></div><!--/.block-->
+	</div>
         <a href="#box3" class="nav_link pull-tab" id="pull3">Read on &darr;</a>
     </div><!--/.block-cont-->
 
@@ -98,20 +91,14 @@ require('header.php');
             <div class="block-title-cont">
                 <h2 class="block-title">Know More</h2>
             </div><!--/.block-title-cont-->
-            <img src="../images/who-illustration.png" class="who-diagram" alt="Image of shaking hands and a crossed pitchfork and dinner fork." align="left">
-
-            <h4>
-                Know what food to sell and who to sell it to.
-            </h4>
-            <p>We give you <strong>real-time market insights</strong> so you can keep up to date on what other farmers are growing.</p>
-            <p>You can track your inventory, manage your sales, and connect directly with your customers</p>
-            <p class="emphasis"><strong>Join the  local food movement today.<a href="#subscription-note">*</a></strong>
-                <a style="cursor:pointer" class="goto">Locate and subscribe to</a> a farm in your area, or <a style="cursor:pointer" class="goto">petition</a> for one to arrive soon.</p>
-
-            <a name="subscription-note" class="footnote">* Subscriptions are currently limited to farms in NYC.</a>
-
-
-
+   	    <div id="salesInv">
+                 <img id="inv-icon" src="../images/Inventory-Mgmt-Icon.png" />
+		 <p>Keep track of your sales and inventory with a simple content management system.</p>
+	    </div>
+	    <div id="fProfile">
+		 <p>Sell your food directly to your neighbors with a Farmer Profile where you can list your products and</p>
+	    </div>
+	    <img src="../images/Mock-Profile.png" id="mockProfile"/>
         </div><!--/.block-->
         <a href="#box4" class="pull-tab nav_link" id="pull4">Read on &darr;</a>
     </div><!--/.block-cont-->
@@ -129,29 +116,19 @@ require('header.php');
             <div class="block-title-cont">
                 <h2 class="block-title">Grow Faster</h2>
             </div><!--/.block-title-cont-->
-            <h4>Growing food is hard work!</h4> 
-            <p>Get the support you need to expand your operation. Swing by a <strong>class or workshop</strong> to hone your skills and meet fellow growers.
-            <p>Come next growing season, you'll be able to find new <strong> urban farming technology </strong> to get more food from your windowsill, balcony, backyard or rooftop.</p>
-
-            <div class="get-started clearfix">
-                <h4 class="question">What are you waiting for?</h4>
-                <div class="address-cont">
-
-                    <span class="go-local">
-                        The local food movement is in your hands.
-                    </span>
-                    <form action="findfarms.php" method="post" class="clearfix">
-
-                        <label for="addressbar">Apply to be a Provider</label>
-                        <input type="text" name="addressbar" class="addressbar autocomplete_location left" />
-
-                        <input type="submit" value="Locate" />
-
-                    </form></div>
-                <span class="or serif">or</span>
-                <a style="cursor:pointer" class="open-petition ribbon tall petition">Petition for a farm &rarr;</a>
-            </div><!--/.get-started-->
-
+	    <img src="../images/who.png" id="hShake" width=110/>
+            <div id="classRes">
+		<h6>Classes and Resources</h6>
+		<p>Take classes from fellow food enthusiasts in your neighborhood!</p>
+		<p>Learn how to keep bees, grow mushrooms, or keep chickens right here in NYC.</p>
+	    </div>
+	    <img src="../images/Social-Network-Icon.png" id="networks" width=125/>
+	    <div id="socialNet">
+		<h6>Social Networking</h6>
+		<p>Connect your profile to your facebook page, twitter feed, or blog.</p>
+		<p>Let your community be a part of your process.</p>
+	    </div>
+	    <div style="clear:both;"></div>
         </div><!--/.block-->
 
     </div><!--/.block-cont-->
