@@ -126,13 +126,13 @@ a#login:hover	{background-position:bottom center;}
 
 .content		{margin-top:85px;}
 
-.content .heading	{text-indent:-9999px; display:block; width:625px;height:83px;background:url(../images/home-sprite.png) no-repeat left top;margin:100px auto 55px;}
+.content .heading	{text-indent:-9999px; display:block; width:625px;height:83px;background:url(../images/FarmerPitch-sprite.png) no-repeat left top;margin:100px auto 55px;}
 
 
 /* Steps paper sheet*/
 .steps			{display:block;border:5px solid white;background:url(../images/texture.png) #f5f1e8;box-shadow:0px 5px 40px rgba(0,0,0,.2);-webkit-box-shadow:0px 5px 40px rgba(0,0,0,.2);-moz-box-shadow:0px 5px 40px rgba(0,0,0,.2);width:626px;padding: 0 12px;margin:0 auto;}
 
-.steps li		{position:relative; top:18px;margin:0 0 30px; width:208px; height:200px;float:left;background:url(../images/home-sprite.png) no-repeat;}
+.steps li		{position:relative; top:18px;margin:0 0 30px; width:208px; height:200px;float:left;background:url(../images/FarmerPitch-sprite.png) no-repeat;}
 .steps a		{margin:0 auto 20px; cursor: pointer; display:block; overflow:hidden;width:210px;height:157px; vertical-align:top;text-align:center;position:relative; background-repeat:none;text-indent:-9999px;background-image:url(../images/steps.png);z-index:10;}
 
 .steps a:hover	{background-position-y:bottom!important;}
@@ -147,9 +147,9 @@ a#login:hover	{background-position:bottom center;}
 
 
 
-.get-started	{font-size:1em; padding:40px 0 25px;margin:0 auto; left:-12px;width:650px;display:block;position:relative;background:url(../images/texture.png) #cec4aa;}
+.get-started	{font-size:1em; padding:20px 0 15px;margin:0 auto; left:-12px;width:650px;display:block;position:relative;background:url(../images/texture.png) #cec4aa;}
 
-.get-started .learn-more		{background-position:-187px -285px;height:46px; width:210px;position:absolute;right:-23px;}
+.get-started .learn-more		{background-position:-187px -285px;height:46px; width:210px;position:absolute;right:-23px;bottom:-5px;}
 .get-started input[type=submit]		{background-position:-162px -286px;background-color:transparent; outline:none;height:33px;width:25px;border-left:none!important;}
 
 .get-started .learn-more,
@@ -165,7 +165,8 @@ a#login:hover	{background-position:bottom center;}
 .get-started .address-cont .go-local	{display:block;width:127px;height:46px;background:url(../images/home-sprite.png) no-repeat -35px -284px;text-indent:-9999px;position:absolute;left:-30px;float:left;z-index:100;}
 
 .get-started .address-cont form		{margin:3px 0 0 90px;}
-
+.get-started .mappp {margin:20px 0px 0px!important;width:auto!important;height:auto!important;text-indent:0px!important;text-align:left!important;float:left;background-image:none!important;text-decoration:underline;overflow:visible!important;}
+.get-started .mappp img {margin-top:-20px!important;margin-right:-20px!important;}
 
 .ui-autocomplete {z-index: 9999 !important;}
 
@@ -173,18 +174,15 @@ a#login:hover	{background-position:bottom center;}
 /* Enter address input box */
 .get-started input.addressbar		{ line-height:31px; font-size:18px;position:relative;border:1px solid #44a098;margin:0;height:23px;z-index:2;background:transparent;color:#6b5836;}
 /* Enter your address helper text */
-.get-started .address-cont label	{position:absolute; left:90px;line-height:32px; font-size:18px;color:#d4c2b2;z-index:1;background:white; padding-left:15px;padding-right:5px;display:block;}
 
 .get-started input.addressbar,
-.get-started .address-cont label	{width:255px;padding-left:15px; }
-
 .get-started h4.question	{color:white!important;font-family:"ITC Franklin Gothic Std";font-size:2em!important;line-height:.8em;font-weight:300!important;text-shadow:none!important;}
 
 
-#why	{padding-bottom:0!important;}
-
-#why	.get-started	{margin-top:45px;left:-20px;padding-top:90px!important;}
-
+#why.block #classRes, #why.block #socialNet {float:left; width:175px;}
+#why.block #hShake, #why.block #networks {float:left;}
+#why.block #hShake {margin-right:20px;}
+#why.block #networks {margin-top:10px;margin-left:-10px;margin-right:5px;}
 
 .ribbon.petition	{background-image: url(http://www.agrowculture.org/images/home-sprite.png);width:206px;right:-20px;position:absolute;}
 
@@ -212,29 +210,26 @@ a#login:hover	{background-position:bottom center;}
 
 
 
-.block h4		{color:#6b5836;font-size:1.65em;font-weight:bold;margin-bottom:20px;text-shadow:0px 1px 2px #fff;}
+.block h4		{color:#6b5836;font-size:1.65em;margin-top:-5px;margin-bottom:10px;text-shadow:0px 1px 2px #fff;}
+.block h6 {color:#6b5836;font-weight:bold;margin-bottom:5px;}
 .block p		{color:#8e8473;font-size:.9em;line-height:1.4em;text-shadow:0px 1px 1px #fff;margin-bottom:13px;}
 .block strong	{font-size:1.1em;}
 
+#what.block{padding-bottom:15px;position:relative;}
+#what.block h4, #what.block p{text-align:left;}
+#what.block img{margin-left:-10px; float:left;}
+#what.block #fork{margin-left:-15px;}
+#what.block #newsL, #what.block #oStore{margin-top:15px;width:170px;float:left;}
+#what.block #newsL{margin-left:20px;}
+#what.block #oStore{margin-left:-25px;}
 
-#what.block			{padding-bottom:15px}
-#what.block	p,
-#what.block h4	{width:375px;text-align:left;}
-#what.block #what-diagram	{margin-right:-140px;margin-top:;padding-left:8px;}
+#soon {position: absolute; right: -38px; bottom: -35px;}
 
-
-#who.block p,
-.footnote		{text-align:left!important;margin-left:220px;}
-#who.block .last p	{text-align:right!important;}
-
-#who.block h4		{font-size:1.55em!important;}
-
-#who.block p b		{font-size:1.2em;text-transform:uppercase;}
-
-#who.block .emphasis	{display:block;background:rgba(255,255,255,.6);padding:10px 10px 13px;}
-#who.block .emphasis strong	{display:block;margin-bottom:3px;}
-#who .who-diagram					{position:relative;top:40px}
-
+#who.block {position:relative;}
+#who.block #salesInv, #who.block #fProfile {float:left;}
+#who.block #fProfile {width:350px;}
+#who.block #inv-icon {float:left;margin-top:-50px;margin-right:25px;margin-bottom:-20px;}
+#mockProfile {position:absolute; right: -150px; bottom: -250px;}
 
 
 .block-cont .pull-tab	{display:block;width:64px;height:100px;z-index:1;text-indent:-9999px;margin:0 auto;background:url(../images/pulltab.png) center top;top:-53px;position:relative;left:-2px;}
